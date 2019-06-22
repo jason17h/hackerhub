@@ -4,7 +4,7 @@ from hackerhub.models import Hackathon
 # Create your views here.
 
 def index(request):
-    return render(request, 'hackerhub/index.html')
+    return render(request, 'index.html')
 
 def hackathonList(request):
     
