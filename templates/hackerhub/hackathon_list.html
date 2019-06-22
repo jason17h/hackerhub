@@ -1,0 +1,16 @@
+{% extends 'hackerhub/base.html' %}
+
+{% block content %}
+
+{% for hackathon in hackathons %}
+
+<h1>{{hackathon.name}}</h1>
+<p>{{hackathon.description}}</p>
+
+{% for person in hackathon.participants.all %}
+<p>participant: {{person.first_name}}</p>
+{% endfor %}
+
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'hackerhub/base.html' %}
+
+{% load bootstrap4 %}
+
+{% block content %}
+
+<form action="{% url 'accounts:user_login' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" class="form-control" name="username" placeholder="Username" aria-label="Username" style="margin-bottom:15px;">
+    <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password" style="margin-bottom:15px;">
+    <input class="btn btn-primary" type="submit" name="" value="Login" style="width:50%; margin-bottom:15px;">
+  </form>
+
+{% endblock %}
+
