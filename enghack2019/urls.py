@@ -25,7 +25,7 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('hackerhub/', include('hackerhub.urls')),
     path('portal/<eventId>/', views.portal, name='portal'),
-    path('/portal/<eventId>/resources/', views.resources, name='resources'),
+    path('portal/<eventId>/resources/', views.resources, name='resources'),
     path('sms', send_sms.sendSMS, name='sms'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
