@@ -132,3 +132,17 @@ def edit_profile(request):
     }
     
     return render(request, template_name, context)
+
+@login_required
+def view_profile(request, username):
+
+    user = User.objects.get(username=username)
+    profile = user.profile
+
+
+    template_name = 'profile.html'
+    context = {
+        'user':user,
+        'profile':profile,
+    }
+    return render(request, template_name, context)

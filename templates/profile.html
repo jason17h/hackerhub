@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class='container'>
+
+    <form>
+        <input type="button" class="btn btn-primary" value="Back" onclick="history.back()">
+    </form>
+    <br>
+    
+    <table class="table">
+        <tr>
+            <th colspan='2'>
+                <h1>{{ user.username }}  
+                    {% if profile.tags == 'Business' %}
+                    <div class="badge badge-secondary" style="background-color: #12AF41">Business</div>
+                    {% elif profile.tags == 'Developer' %}
+                    <div class="badge badge-secondary" style="background-color: #25BCFD">Developer</div>
+                    {% elif profile.tags == 'Designer' %}
+                    <div class="badge badge-secondary" style="background-color: pink">Designer</div>
+                    {% else %}
+                    <div class="badge badge-secondary" style="background-color: orange">New Hacker</div>
+                    {% endif %}
+                </h1>
+            </th>
+        </tr>
+        <tr>
+            <td>Name:</td>
+            <td>{{ user.first_name }} {{ user.last_name }}</td>
+        </tr>
+        <tr>
+            <td>Skills:</td>
+            <td>{{ profile.skillset }}</td>
+        </tr>
+        <tr>
+            <td>Devpost:</td>
+            <td><a href="https://devpost.com/{{ participant.profile.devpost }}" target="_blank">{{ participant.profile.devpost }}</a></td>
+        </tr>
+        <tr>
+            <td>Github:</td>
+            <td><a href="https://github.com/{{ participant.profile.github }}" target="_blank">{{ participant.profile.github }}</a></td>
+        </tr>
+        <tr>
+            <td>LinkedIn:</td>
+            <td><a href="https://www.linkedin.com/in/{{ participant.profile.linkedin }}">{{ participant.profile.linkedin }}</a></td>
+        </tr>
+
+
+    </table>
+
+</div>
+
+              
+
+
+
+
+
+
+{% endblock %}
