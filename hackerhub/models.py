@@ -3,6 +3,20 @@ from accounts.models import User
 
 # Create your models here.
 
+class Challenge(models.Model):
+
+    name = models.CharField(max_length=50, blank=True, default='')
+
+    host = models.CharField(max_length=100, blank=True, default='')
+
+    prize = models.CharField(max_length=50, blank=True, default='')
+
+    description = models.TextField(max_length=1000, blank=True, default='')
+
+    def __str__(self):
+
+        return self.name
+
 class Hackathon(models.Model):
 
     name = models.CharField(max_length=50, blank=True, default='')
@@ -22,6 +36,8 @@ class Hackathon(models.Model):
 
     logo = models.ImageField(upload_to='hackathon_pics', null=True)
 
+    challenges = models.ManyToManyField(Challenge, blank=True)
+
     # winners = models.ManyToManyField(User, blank=True)
 
     def __str__(self):
@@ -39,4 +55,6 @@ class Team(models.Model):
 
     def __str__(self):
         return self.teamName
+
+
 
