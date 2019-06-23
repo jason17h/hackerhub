@@ -5,7 +5,7 @@ app_name = 'hackerhub'
 
 urlpatterns = [
 
-    path('hackathons/', views.hackathonList, name='hackathonList'),
+    # path('hackathons/', views.hackathonList, name='hackathonList'),
     
 
 ]
