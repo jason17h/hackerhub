@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'accounts',
     'hackerhub',
     'bootstrap4',
+    'phone_field',
 ]
 
 MIDDLEWARE = [

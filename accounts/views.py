@@ -116,7 +116,7 @@ def edit_profile(request):
         user_form = EditUserForm(instance=request.user)
         profile_form = EditProfileForm(instance=request.user.profile)
 
-    template_name = 'accounts/edit_profile.html'
+    template_name = 'user.html'
 
     context = {
         'user_form':user_form,
