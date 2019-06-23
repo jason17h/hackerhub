@@ -28,10 +28,15 @@ def register(request):
             user = user_form.save()
             # user.set_password(user.password) ###########################
             user.save()
-            print(user.password)
 
             # Update registration status
             registered = True
+
+            user = authenticate(username=user_form.cleaned_data['username'],
+                                password=user_form.cleaned_data['password1'])
+
+            login(request, user)
+            return HttpResponseRedirect(reverse('accounts:edit_profile'))
 
         else: # if one of the forms is invalid:
             print(user_form.errors) # MANIUPLATE THIS!
@@ -39,7 +44,7 @@ def register(request):
     else: # if no post request, then render the forms as blank
         user_form = UserForm()
 
-    template_name = 'accounts/register.html'
+    template_name = 'register.html'
     context = {
     'user_form':user_form,
      # 'profile_form':profile_form,
@@ -71,13 +76,13 @@ def user_login(request):
     else:
         context = {}
 
-    template_name = 'accounts/login.html'
+    template_name = 'login.html'
     return render(request, template_name, context)
 
 @login_required
 def user_logout(request):
     logout(request)
-    return HttpResponseRedirect(reverse('index'))
+    return HttpResponseRedirect(reverse('accounts:user_login'))
 
 @login_required
 def edit_profile(request):
