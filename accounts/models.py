@@ -15,7 +15,11 @@ class Profile(models.Model):
 
     # ===== social media links =====
 
-    github = models.CharField(max_length=100, blank=True, default='')
+    github = models.CharField(max_length=30, null=True, blank=True)
+
+    devpost = models.CharField(max_length=30, null=True, blank=True)
+
+    linkedin = models.CharField(max_length=30, null=True, blank=True)
 
     # ===== tags =====
 
@@ -26,11 +30,13 @@ class Profile(models.Model):
         ('Designer', 'Designer'),
     ]
 
-    phone = PhoneField(blank=True)
+    phone = models.CharField(max_length=10, blank=True, default='')
 
     skillset = models.CharField(max_length=200, blank=True, default='')
 
     tags = models.CharField(max_length=15, default='New', choices=TAGS)
+
+    bio = models.TextField(max_length=900, blank=True, default='')
 
     # prevHackathons = models.ManyToManyField(Hackathon)
 

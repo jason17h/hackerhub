@@ -53,46 +53,51 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label class="bmd-label-floating">Phone Number</label>
-                      <input type="text" class="form-control">
+                      <!-- <label class="bmd-label-floating">Phone Number</label> -->
+                      {% bootstrap_field profile_form.phone %}
                     </div>
                   </div>
 
 
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label class="bmd-label-floating">Skill Sets</label>
-                      <input type="text" class="form-control">
+                      {% bootstrap_field profile_form.skillset %}
+                      <!-- <label class="bmd-label-floating">Skill Sets</label>
+                      <input type="text" class="form-control"> -->
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label class="bmd-label-floating">DevPost</label>
-                      <input type="text" class="form-control">
+                      {% bootstrap_field profile_form.devpost %}
+                      <!-- <label class="bmd-label-floating">DevPost</label>
+                      <input type="text" class="form-control"> -->
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label class="bmd-label-floating">GitHub</label>
-                      <input type="text" class="form-control">
+                      {% bootstrap_field profile_form.github %}
+                      <!-- <label class="bmd-label-floating">GitHub</label>
+                      <input type="text" class="form-control"> -->
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="form-group">
-                      <label class="bmd-label-floating">LinkedIn</label>
-                      <input type="text" class="form-control">
+                      {% bootstrap_field profile_form.linkedin %}
+                      <!-- <label class="bmd-label-floating">LinkedIn</label>
+                      <input type="text" class="form-control"> -->
                     </div>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-12">
                     <div class="form-group">
-                      <label>Bio</label>
+                      {% bootstrap_field profile_form.bio %}
+                      <!-- <label>Bio</label>
                       <div class="form-group">
                         <textarea class="form-control" rows="5"></textarea>
-                      </div>
+                      </div> -->
                     </div>
                   </div>
                 </div>
