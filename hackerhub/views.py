@@ -1,9 +1,12 @@
 from django.shortcuts import render
 from hackerhub.models import Hackathon
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
+@login_required
 def index(request):
+
     hackathons = Hackathon.objects.order_by('startDate').reverse()
     template_name = 'index.html'
     context = {
