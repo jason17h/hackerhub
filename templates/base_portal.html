@@ -45,14 +45,14 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="{% url 'index' %}">
+        <a class="nav-link" href="{% url 'portal' hackathon.eventId %}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Find a Team</span></a>
       </li>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{% url 'resources' hackathon.eventId %}">
           <i class="fas fa-history"></i>
           <span>Resources</span></a>
       </li>

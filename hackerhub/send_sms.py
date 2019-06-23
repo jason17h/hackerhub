@@ -1,6 +1,8 @@
 import os
 from twilio.rest import Client 
 from django.shortcuts import render
+from django.urls import reverse
+from django.http import HttpResponseRedirect
 from hackerhub.models import Hackathon
 
 
@@ -24,4 +26,5 @@ def sendSMS(request):
         'hackathons':hackathons,
     }
 
-    return render(request, template_name, context)
+    # return render(request, reverse('index'), context)
+    return HttpResponseRedirect(reverse('index'))

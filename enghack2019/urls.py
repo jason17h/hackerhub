@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from hackerhub import views
+from hackerhub import views, send_sms
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -24,6 +24,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('hackerhub/', include('hackerhub.urls')),
-    path('portal/<eventId>/', views.portal, name='portal')
+    path('portal/<eventId>/', views.portal, name='portal'),
+    path('/portal/<eventId>/resources/', views.resources, name='resources'),
+    path('sms', send_sms.sendSMS, name='sms'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

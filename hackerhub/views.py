@@ -28,6 +28,18 @@ def portal(request, eventId):
 
     return render(request, template_name, context)
 
+def resources(request, eventId):
+
+    hackathon = Hackathon.objects.get(eventId=eventId)
+
+    template_name = 'resources.html'
+
+    context = {
+        'hackathon':hackathon
+    }
+
+    return render(request, template_name, context)
+
 
 
 # def index(request):
