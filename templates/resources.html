@@ -1,0 +1,65 @@
+{% extends 'base_portal.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Upcoming Hackathons</h1>
+    <a href="https://mlh.io/" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-code"></i>
+      MLH Website</a>
+  </div>
+
+  <!--UPCOMING HACKATHON ROWS-->
+  <div class="col-lg-12">
+
+    
+
+    <div class="card shadow mb-4">
+      <!-- Card Header - Dropdown -->
+      <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+        <h5 class="m-0 font-weight-bold text-primary">
+          Resource Name <br>
+        </h5>
+        <h6 class="m-0 font-weight-bold text-primary"></h6>
+        </h5>
+        <div class="dropdown no-arrow">
+        </div>
+        <div class="d-flex">
+          <div class="p-2">
+            <a href="https://google.com" class="btn btn-success btn-icon-split float-lg-right">
+              <span class="icon text-white-200">
+                <i class="fas fa-arrow-right"></i>
+              </span>
+              <span class="text">Go To Course</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Card Body -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-3">
+            <!--
+            <image class="account-img" src="{{ hackathon.logo.url }}"></image>
+            -->
+          </div>
+          <div class="col-md-9">
+            <strong>Difficulty: Beginner</strong><br>
+            <!-- <strong>Dates: {{ hackathon.startDate }} - {{ hackathon.endDate }}</strong><br> -->
+            This is the course.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    {% endfor %}
+
+  </div>
+  <!-- /.container-fluid -->
+
+  {% endblock %}
