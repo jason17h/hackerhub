@@ -51,9 +51,17 @@
       </div>
       <!-- Card Body -->
       <div class="card-body">
-        <strong>Location: {{ hackathon.location }}</strong><br>
-        <!-- <strong>Dates: {{ hackathon.startDate }} - {{ hackathon.endDate }}</strong><br> -->
-        {{ hackathon.description }}
+        <div class="row">
+            <div class="col-md-3">
+                <image class="account-img" src="{{ hackathon.logo.url }}"></image>
+            </div>
+            <div class="col-md-9">
+                <strong>Location: {{ hackathon.location }}</strong><br>
+                <!-- <strong>Dates: {{ hackathon.startDate }} - {{ hackathon.endDate }}</strong><br> -->
+                {{ hackathon.description }}
+            </div>
+        </div>
+        
       </div>
     </div>
 

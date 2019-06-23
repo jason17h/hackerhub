@@ -20,6 +20,8 @@ class Hackathon(models.Model):
 
     website = models.URLField(null=True, blank=True)
 
+    logo = models.ImageField(upload_to='hackathon_pics', null=True)
+
     # winners = models.ManyToManyField(User, blank=True)
 
     def __str__(self):

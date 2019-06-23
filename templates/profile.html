@@ -36,15 +36,19 @@
         </tr>
         <tr>
             <td>Devpost:</td>
-            <td><a href="https://devpost.com/{{ participant.profile.devpost }}" target="_blank">{{ participant.profile.devpost }}</a></td>
+            <td><a href="https://devpost.com/{{ profile.devpost }}" target="_blank">{{ profile.devpost }}</a></td>
         </tr>
         <tr>
             <td>Github:</td>
-            <td><a href="https://github.com/{{ participant.profile.github }}" target="_blank">{{ participant.profile.github }}</a></td>
+            <td><a href="https://github.com/{{ profile.github }}" target="_blank">{{ profile.github }}</a></td>
         </tr>
         <tr>
             <td>LinkedIn:</td>
-            <td><a href="https://www.linkedin.com/in/{{ participant.profile.linkedin }}">{{ participant.profile.linkedin }}</a></td>
+            <td><a href="https://www.linkedin.com/in/{{ profile.linkedin }}">{{ profile.linkedin }}</a></td>
+        </tr>
+        <tr>
+            <td>Bio:</td>
+            <td>{{ profile.bio }}</td>
         </tr>
 
 

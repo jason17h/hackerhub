@@ -48,7 +48,17 @@
             {% for participant in participants %}
             <tr>
               <td>{{ participant.first_name }} {{ participant.last_name }}</td>
-              <td>{{ participant.profile.tags }}</td>
+              <td>
+                  {% if participant.profile.tags == 'Business' %}
+                  <div class="badge badge-secondary" style="background-color: #12AF41">Business</div>
+                  {% elif participant.profile.tags == 'Developer' %}
+                  <div class="badge badge-secondary" style="background-color: #25BCFD">Developer</div>
+                  {% elif participant.profile.tags == 'Designer' %}
+                  <div class="badge badge-secondary" style="background-color: pink">Designer</div>
+                  {% else %}
+                  <div class="badge badge-secondary" style="background-color: orange">New Hacker</div>
+                  {% endif %}
+              </td>
               <td>{{ participant.profile.skillset }}</td>
               <td><a href="https://devpost.com/{{ participant.profile.devpost }}" target="_blank">{{ participant.profile.devpost }}</a></td>
               <td><a href="https://github.com/{{ participant.profile.github }}" target="_blank">{{ participant.profile.github }}</a></td>

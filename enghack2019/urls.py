@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from hackerhub import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -23,4 +25,5 @@ urlpatterns = [
     path('accounts/', include('accounts.urls')),
     path('hackerhub/', include('hackerhub.urls')),
     path('portal/<eventId>/', views.portal, name='portal')
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
