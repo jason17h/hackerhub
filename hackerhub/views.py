@@ -15,6 +15,19 @@ def index(request):
 
     return render(request, template_name, context)
 
+def portal(request, eventId):
+    
+    hackathon = Hackathon.objects.get(eventId=eventId)
+    participants = hackathon.participants.all()
+
+    template_name = 'portal.html'
+    context = {
+        'hackathon':hackathon,
+        'participants':participants,
+    }
+
+    return render(request, template_name, context)
+
 
 
 # def index(request):

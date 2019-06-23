@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('accounts.urls')),
     path('hackerhub/', include('hackerhub.urls')),
+    path('portal/<eventId>/', views.portal, name='portal')
 ]

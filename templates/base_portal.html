@@ -47,14 +47,14 @@
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'index' %}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Upcoming Hackathons</span></a>
+          <span>Find a Team</span></a>
       </li>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item active">
         <a class="nav-link" href="#">
           <i class="fas fa-history"></i>
-          <span>Past Hackathons</span></a>
+          <span>Resources</span></a>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
@@ -62,7 +62,7 @@
       <li class="nav-item active">
         <a class="nav-link" href="{% url 'accounts:edit_profile' %}">
           <i class="fas fa-user-cog"></i>
-          <span>Profile Settings</span></a>
+          <span>Events & Sponsors</span></a>
       </li>
       {% endif %}
     </ul>
@@ -217,11 +217,11 @@
   <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
 
   <!-- Page level plugins -->
-  <script src="{% static 'vendor/chart.js/Chart.min.js' %}"></script>
+  <script src="{% static 'vendor/datatables/jquery.dataTables.min.js' %}"></script>
+  <script src="{% static 'vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
 
   <!-- Page level custom scripts -->
-  <script src="{% static 'js/demo/chart-area-demo.js' %}"></script>
-  <script src="{% static 'js/demo/chart-pie-demo.js' %}"></script>
+  <script src="{% static 'js/demo/datatables-demo.js' %}"></script>
 
 </body>
 
