@@ -27,7 +27,7 @@ SECRET_KEY = 'lkw8azd@)qm$wfn%bg$36qsv!z61d8zw19_f)d4-j*xzvq@)x^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['wehack.herokuapp.com']
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'hackerhub',
     'bootstrap4',
     'phone_field',
+    'herokuapp',
 ]
 
 MIDDLEWARE = [
